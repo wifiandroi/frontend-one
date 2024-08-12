@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/inicio"><img src="assets/logo.png" alt="" width="55"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/inicio">Inicio <i class="bi bi-house-door"></i></a>
+          </li>
+        </ul>
+        <div>
+          <a *ngIf="!userLoginOn" class="btn btn-light btn-sm me-2 fw-bold" routerLink="/iniciar-sesion">Iniciar sesión</a>
+          <a *ngIf="userLoginOn" class="btn btn-light btn-sm fw-bold" routerLink="/iniciar-sesion">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+  </nav>
